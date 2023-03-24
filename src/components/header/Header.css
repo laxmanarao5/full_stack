@@ -1,0 +1,9 @@
+.nav .active{
+    color:#fff;
+    background-color: red;
+    border-radius: 10px;
+}
+
+.nav .inactive{
+    color: #fff;
+}

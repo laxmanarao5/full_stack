@@ -1,0 +1,8 @@
+POST http://localhost:4000/user/register
+Content-Type: application/json
+
+{
+    "name":"laxman",
+    "email":"lakshmana5296@fdmfm.com",
+    "url":"dfgdhfsa"
+}

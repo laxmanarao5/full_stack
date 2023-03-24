@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "name": "Vijay",
+      "email": "lakshmana5296@gmail.com",
+      "dob": "2023-03-23",
+      "url": "https://pbs.twimg.com/media/EjY_lxhUcAAqCde.jpg:large",
+      "id": 1
+    },
+    {
+      "name": "Jr NTR",
+      "email": "ntr@gmail.com",
+      "dob": "2023-03-24",
+      "url": "https://img.mensxp.com/media/content/2022/Jan/19_61deb81182673.jpeg",
+      "id": 2
+    }
+  ]
+}
