@@ -19,12 +19,13 @@ function User() {
   //function close model
   const closeModal=()=>setShow(false)
 
+  //function to handle edit click event
   const editUser=()=>{
     openModal()
     //set values to input .
     setValue("name",state.name)
     setValue("email",state.email)
-    setValue("dob",state.dob)
+    setValue("dob",state.dob.toString().slice(0,10))
     setValue("url",state.url)
   }
 
@@ -33,8 +34,6 @@ function User() {
       let modifiedUser=getValues()
       //add id to modified user
       // modifiedUser.id=state.id
-
-      console.log(modifiedUser);
       closeModal()
       //update data through API
       let res=await axios.put(`http://localhost:4000/user-api/user/${state.id}`,modifiedUser)
@@ -64,7 +63,7 @@ function User() {
           <div className='col-12 col-md-8 mx-auto mt-5' style={{textAlign:"center"}}> 
             <p className='fs-5 mt-4'><b>Name : </b>{userInfo.name}</p>
             <p className='fs-5'><b>Email : </b> {userInfo.email}</p>
-            <p className='fs-5'><b>DOB : </b> {userInfo.dob}</p>
+            <p className='fs-5'><b>DOB : </b> {userInfo.dob.toString().slice(0,10)}</p>
             
             <button className='btn btn-primary mt-3' onClick={editUser}>Edit</button>
             <button className='btn btn-danger ms-5 mt-3' onClick={deleteUser}>Delete</button>

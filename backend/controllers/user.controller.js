@@ -29,11 +29,7 @@ exports.getAllUsers=expressAsyncHandler(async(req,res)=>{
     let result=await User.findAll({where:{
         status:true
     }})
-    setTimeout(()=>{
-        res.send({message:"All users",payload:result})
-    },3000)
-    //res.send({message:"All users",payload:result})
-})
+    res.send({message:"All users",payload:result})})
 
 //update user information
 exports.updateUser= expressAsyncHandler ( async (req,res) => {
