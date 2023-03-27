@@ -10,7 +10,7 @@ app.listen(process.env.PORT || 4000,()=>{
     console.log(`Listening to port ${process.env.PORT}`);
 })
 
-// //import cors
+//import cors
 // const cors=require("cors")
 
 // //cors configuration

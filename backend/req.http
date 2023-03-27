@@ -6,3 +6,13 @@ Content-Type: application/json
     "email":"lakshmana5296@fdmfm.com",
     "url":"dfgdhfsa"
 }
+
+###
+
+POST http://localhost:4000/user-api/login
+Content-Type: application/json
+
+{
+    "email":"lakshmana5296@gmail.com",
+    "password":"Laxmana@123"
+}

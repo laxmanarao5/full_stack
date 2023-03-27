@@ -9,7 +9,9 @@ import ContactUs from './components/contactUs/ContactUs';
 import ErrorComponent from './components/errorComponent/ErrorComponent';
 import UsersList from './components/usersList/UsersList';
 import User from './components/usersList/User';
+import Login from './components/login/Login';
 
+import UserProfile from './components/userProfile/UserProfile'
 function App() {
 
   //create router object
@@ -28,6 +30,10 @@ function App() {
             element:<Register/>
           },
           {
+              path:"login",
+              element:<Login/>
+          },
+          {
             path:"contact-us",
             element:<ContactUs/>
           },
@@ -38,6 +44,10 @@ function App() {
           {
             path:"user/:id",
             element:<User/>
+          },
+          {
+            path:"user-profile/:username",
+            element:<UserProfile/>
           }
         ]
     }

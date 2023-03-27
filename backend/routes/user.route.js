@@ -8,7 +8,7 @@ const userApp=exp.Router()
 userApp.use(exp.json())
 
 //import controllers
-const {test, register,getAllUsers, updateUser,deleteUser}=require("../controllers/user.controller")
+const {test, register,login,getAllUsers, updateUser,deleteUser,testProtection}=require("../controllers/user.controller")
 
 
 //test route
@@ -17,6 +17,8 @@ userApp.get("/test",test)
 //registration route
 userApp.post("/register",register)
 
+
+userApp.post("/login",login)
 //Get all users
 userApp.get("/all",getAllUsers)
 

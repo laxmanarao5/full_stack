@@ -16,14 +16,16 @@ function Register() {
   const onSubmit= async (user) =>{
     try{
       let response=await axios.post("http://localhost:4000/user-api/register",user)
+      console.log(response);
       if(response.status===201)
       {
         reset()
-        navigate("/users-list")
+        navigate("/login")
       }
     }
     catch(error){
       setErr(error.message)
+      console.log(error.message);
     }
   }
 
@@ -39,8 +41,8 @@ function Register() {
                 err && <p className='text-danger fs-1'>{err}</p>
               }
             <div className='m-3'>
-              <label className='form-label'>Name</label>
-            <input type="text" {...register("name",{required:"Name is required"})} className='form-control'/>
+              <label className='form-label'>Username</label>
+            <input type="text" {...register("username",{required:"Name is required"})} className='form-control'/>
             {errors.name && <p className='text-danger'>{errors.name?.message}</p>}
             </div>
             
@@ -49,7 +51,11 @@ function Register() {
             <input type="email" {...register("email",{required:"Email is required"})} className='form-control'/>
             {errors.email && <p className='text-danger'>{errors.email?.message}</p>}
             </div>
-
+            <div className='m-3'>
+              <label  className='form-label'>Password</label>
+            <input type="password" {...register("password",{required:"Password is required"})} className='form-control'/>
+            {errors.password && <p className='text-danger'>{errors.email?.message}</p>}
+            </div>
             <div className='m-3'>
               <label className='form-label'>Date Of Birth</label>
             <input type="date" {...register("dob",{required:"Date of birth is required"})} className='form-control'/>
